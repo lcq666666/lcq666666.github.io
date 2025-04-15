@@ -1,9 +1,96 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.12">
   <diagram name="第 1 页" id="IvPZlndUoE6Re-1l50dJ">
-    <mxGraphModel>
+    <mxGraphModel dx="1044" dy="562" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-29" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="391" y="832" width="98" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-28" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="387" y="535" width="98" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-26" value="逐渐平衡采样" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="391" y="538" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-1" target="4BrUw0PnxXfCZn6Bulv5-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-1" target="4BrUw0PnxXfCZn6Bulv5-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-1" target="4BrUw0PnxXfCZn6Bulv5-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-1" value="类别不均衡方法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="635" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-3" target="4BrUw0PnxXfCZn6Bulv5-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-3" target="4BrUw0PnxXfCZn6Bulv5-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-3" target="4BrUw0PnxXfCZn6Bulv5-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-3" value="集成方法" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="193" y="609" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-4" target="4BrUw0PnxXfCZn6Bulv5-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-4" target="4BrUw0PnxXfCZn6Bulv5-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-4" target="4BrUw0PnxXfCZn6Bulv5-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-4" value="重采样方法" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="475" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-5" target="4BrUw0PnxXfCZn6Bulv5-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-31" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-5" target="4BrUw0PnxXfCZn6Bulv5-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-32" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-5" target="4BrUw0PnxXfCZn6Bulv5-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4BrUw0PnxXfCZn6Bulv5-5" target="4BrUw0PnxXfCZn6Bulv5-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-5" value="重加权方法" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="724" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-11" value="过采样" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="385" y="441" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-12" value="欠采样" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="385" y="494" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-15" value="Boosting" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="399" y="632" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-16" value="Bagging" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="585" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-17" value="集成深度学习结构" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="673" width="102" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-21" value="加权交叉熵损失（WCE）" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="713" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-22" value="成本敏感学习（CB）" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="791" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-23" value="焦点损失（FL）" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="751" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-24" value="亲和力损失&lt;div&gt;（AffinityLoss）&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;dashed=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="835" width="90" height="34" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
