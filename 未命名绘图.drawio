@@ -428,6 +428,18 @@
         <mxCell id="4BrUw0PnxXfCZn6Bulv5-212" value="" style="html=1;whiteSpace=wrap;shape=isoCube2;backgroundOutline=1;isoAngle=15;fillColor=#A9C4EB;strokeColor=#0e8088;fillStyle=auto;" vertex="1" parent="1">
           <mxGeometry x="620" y="1699" width="27" height="126" as="geometry" />
         </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-213" value="&lt;b&gt;&lt;font style=&quot;color: rgb(175, 175, 175);&quot; face=&quot;Verdana&quot;&gt;Bx167x1x1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="560.13" y="1708" width="94" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-214" value="&lt;b&gt;&lt;font style=&quot;color: rgb(175, 175, 175);&quot; face=&quot;Verdana&quot;&gt;Bx167x4x4&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="119" y="1721" width="94" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-215" value="&lt;font face=&quot;Times New Roman&quot;&gt;MaxPool&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1749" width="62" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrUw0PnxXfCZn6Bulv5-217" value="&lt;font face=&quot;Times New Roman&quot;&gt;Feature&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Vector&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="605" y="1818" width="54" height="41" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
