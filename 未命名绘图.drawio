@@ -607,6 +607,9 @@
         <mxCell id="N9Sx8PRcx-souhXSjdFB-57" value="pooling" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="670" y="2740" width="57" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="N9Sx8PRcx-souhXSjdFB-58" value="classifier" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="768" y="2598" width="65" height="26" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
