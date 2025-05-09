@@ -1530,7 +1530,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="pyR8RfzP6lFWeoko6obq-49" value="预测概率分布" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1053" y="1636.8200000000002" width="90" height="26" as="geometry" />
+          <mxGeometry x="-1048" y="1630.0000000000002" width="90" height="26" as="geometry" />
         </mxCell>
         <mxCell id="pyR8RfzP6lFWeoko6obq-87" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-1314.23216" y="1452.3970769230768" width="103.23216000000002" height="202.42292307692315" as="geometry" />
