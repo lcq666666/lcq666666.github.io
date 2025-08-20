@@ -1,8 +1,2242 @@
-<p>Hello 大家好</p>
-<p>我是李蜗牛，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三 - AI程序员 | 机器学习专家</title>
+    <meta name="description" content="张三的个人网站 - 专业AI工程师，专注机器学习、深度学习和自然语言处理">
+    
+    <!-- 社交媒体分享优化 -->
+    <meta property="og:title" content="张三 - AI程序员">
+    <meta property="og:description" content="专业的AI工程师，拥有5年机器学习经验">
+    <meta property="og:type" content="website">
+    
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== 之前的样式保持不变，在此基础上添加新样式 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/ci-ren-chao-shuai">知乎</a> </li>
-  <li> <a href="https://blog.csdn.net/m0_61762695">我的博客(已经不更细了)</a> </li>
-</ul>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --shadow: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===== 增强的导航栏 ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ===== 增强的英雄区域 ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-content .status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--success-color);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* ===== 快速信息栏 ===== */
+        .quick-info {
+            background: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .info-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .info-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* ===== 增强的关于我区域 ===== */
+        .about {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-image {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            margin: 0 auto;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .personal-info {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .personal-info h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .info-value {
+            color: var(--text-light);
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* ===== 工作经历时间线 ===== */
+        .timeline {
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: var(--bg-light);
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== 增强的技能区域 ===== */
+        .skills {
+            padding: 5rem 0;
+        }
+
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .category-header h4 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .skill-level {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: var(--bg-light);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 2s ease;
+        }
+
+        /* ===== 增强的项目展示 ===== */
+        .projects {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .overlay-btn {
+            padding: 0.5rem 1rem;
+            background: white;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .overlay-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .project-content h4 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .project-status {
+            padding: 0.25rem 0.75rem;
+            background: var(--success-color);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 博客/文章区域 ===== */
+        .blog {
+            padding: 5rem 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .blog-image {
+            height: 150px;
+            background: var(--gradient-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .blog-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 增强的联系区域 ===== */
+        .contact {
+            padding: 5rem 0;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem 1rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-btn:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* ===== 页脚增强 ===== */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            background: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+        }
+
+        .footer-bottom p {
+            color: #9ca3af;
+        }
+
+        /* ===== 动画增强 ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== 滚动指示器 ===== */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(37, 99, 235, 0.2);
+            z-index: 9999;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== 返回顶部按钮 ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* ===== 响应式设计 ===== */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .info-grid,
+            .skills-categories,
+            .projects-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-filters {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+            }
+
+            .filter-btn {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 滚动进度指示器 -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-robot"></i>
+                张三
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> 技能</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> 项目</a></li>
+                <li><a href="#blog" class="nav-link"><i class="fas fa-blog"></i> 博客</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> 联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>你好，我是<br><span style="color: #fbbf24;">张三</span></h1>
+                <p class="subtitle">AI工程师 · 机器学习专家 · 技术创新者</p>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    <span>目前正在寻找新的机会</span>
+                </div>
+                <p>我专注于人工智能和机器学习技术，致力于用代码改变世界。拥有5年深度学习、自然语言处理和计算机视觉经验，已完成30+项目，服务过10+企业客户。</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">年经验</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">完成项目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">企业客户</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> 查看项目
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> 联系我
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="profile-image">🤖</div>
+                    <h3>AI程序员</h3>
+                    <p>让AI为人类服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 快速信息栏 -->
+    <section class="quick-info">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h4>位置</h4>
+                <p>北京市海淀区</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>学历</h4>
+                <p>清华大学 计算机硕士</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4>当前职位</h4>
+                <p>高级AI工程师</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h4>语言</h4>
+                <p>中文(母语) / 英文(流利)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">关于我</h2>
+            <p class="section-subtitle fade-in">了解我的背景、经历和技术理念</p>
+            
+            <div class="about-grid">
+                <div class="about-sidebar fade-in">
+                    <div class="about-image">
+                        <div class="about-img">👨‍💻</div>
+                    </div>
+                    
+                    <div class="personal-info">
+                        <h4>个人信息</h4>
+                        <ul class="info-list">
+                            <li>
+                                <span class="info-label">姓名</span>
+                                <span class="info-value">张三</span>
+                            </li>
+                            <li>
+                                <span class="info-label">生日</span>
+                                <span class="info-value">1995年6月15日</span>
+                            </li>
+                            <li>
+                                <span class="info-label">电话</span>
+                                <span class="info-value">+86 138-0013-8000</span>
+                            </li>
+                            <li>
+                                <span class="info-label">邮箱</span>
+                                <span class="info-value">zhang.san@email.com</span>
+                            </li>
+                            <li>
+                                <span class="info-label">网站</span>
+                                <span class="info-value">zhangsan.github.io</span>
+                            </li>
+                            <li>
+                                <span class="info-label">爱好</span>
+                                <span class="info-value">阅读、跑步、摄影</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-content fade-in">
+                    <h3>我的故事</h3>
+                    <p>作为一名充满热情的AI程序员，我在人工智能领域有着5年的丰富经验。我专注于开发创新的机器学习解决方案，帮助企业和个人解决复杂的技术挑战。</p>
+                    
+                    <p>我的技术栈涵盖了从底层算法实现到部署生产环境的完整流程。我相信技术应该为人类服务，让世界变得更美好。在过去的5年中，我参与了多个大型AI项目，从智能推荐系统到自动驾驶技术，每个项目都让我对AI的潜力有了更深的理解。</p>
+                    
+                    <p>在工作之余，我热衷于开源贡献、技术写作和知识分享，希望能够帮助更多人进入AI领域。我的GitHub上有20+开源项目，总计获得了2000+ stars，同时我也是多个技术社区的活跃贡献者。</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>高级AI工程师</h4>
+                                <div class="timeline-company">字节跳动</div>
+                                <div class="timeline-date">2022年6月 - 至今</div>
+                                <p>负责推荐算法优化，用户增长率提升15%，日活跃用户增加200万</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>AI算法工程师</h4>
+                                <div class="timeline-company">腾讯</div>
+                                <div class="timeline-date">2020年7月 - 2022年5月</div>
+                                <p>开发智能客服系统，自动回复准确率达到92%，人工成本降低60%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>计算机科学硕士</h4>
+                                <div class="timeline-company">清华大学</div>
+                                <div class="timeline-date">2018年9月 - 2020年6月</div>
+                                <p>专注机器学习研究，发表SCI论文3篇，获得国家奖学金</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">专业技能</h2>
+            <p class="section-subtitle fade-in">全栈AI开发能力，从算法设计到生产部署</p>
+            
+            <div class="skills-categories">
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>机器学习</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">深度学习</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">神经网络</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">强化学习</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">监督学习</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>自然语言处理</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Transformer</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">BERT/GPT</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">文本分析</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">机器翻译</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>计算机视觉</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CNN</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">目标检测</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">图像分割</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">GAN</span>
+                                <span class="skill-level">中级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>编程语言</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>云平台与部署</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Kubernetes</span>
+                                <span class="skill-level">中级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MLOps</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>数据科学</h4>
+                    </div>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">数据分析</span>
+                                <span class="skill-level">专家</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">数据可视化</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">统计建模</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">大数据处理</span>
+                                <span class="skill-level">高级</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">精选项目</h2>
+            <p class="section-subtitle fade-in">展示我的技术实力和创新能力</p>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="ai">人工智能</button>
+                <button class="filter-btn" data-filter="web">Web开发</button>
+                <button class="filter-btn" data-filter="mobile">移动应用</button>
+                <button class="filter-btn" data-filter="data">数据科学</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-category="ai">
+                    <div class="project-image">
+                        🤖
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>智能聊天机器人</h4>
+                            <span class="project-status">已完成</span>
+                        </div>
+                        <p>基于Transformer架构的多轮对话系统，支持多种语言和领域知识问答，准确率达95%。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年3月</span>
+                            <span><i class="fas fa-users"></i> 3人团队</span>
+                            <span><i class="fas fa-clock"></i> 2个月</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Transformer</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> 在线演示
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="web">
+                    <div class="project-image">
+                        📊
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>企业数据分析平台</h4>
+                            <span class="project-status">运行中</span>
+                        </div>
+                        <p>企业级数据分析和可视化平台，支持实时数据处理和智能报告生成，服务10万+用户。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年1月</span>
+                            <span><i class="fas fa-users"></i> 5人团队</span>
+                            <span><i class="fas fa-clock"></i> 4个月</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> 在线演示
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="ai">
+                    <div class="project-image">
+                        🔍
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>智能图像识别系统</h4>
+                            <span class="project-status">已部署</span>
+                        </div>
+                        <p>高精度图像分类和物体检测系统，适用于工业质检和安防监控场景，检测精度达98.5%。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023年11月</span>
+                            <span><i class="fas fa-users"></i> 2人团队</span>
+                            <span><i class="fas fa-clock"></i> 3个月</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">YOLO</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> 在线演示
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="mobile">
+                    <div class="project-image">
+                        📱
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>AI健康助手App</h4>
+                            <span class="project-status">开发中</span>
+                        </div>
+                        <p>基于机器学习的个人健康管理应用，提供智能健康建议和风险预测功能。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年5月</span>
+                            <span><i class="fas fa-users"></i> 4人团队</span>
+                            <span><i class="fas fa-clock"></i> 进行中</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">ML Kit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> 预览版本
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="data">
+                    <div class="project-image">
+                        📈
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>股票预测模型</h4>
+                            <span class="project-status">研究项目</span>
+                        </div>
+                        <p>基于LSTM和注意力机制的股票价格预测模型，结合新闻情感分析提高预测准确性。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023年8月</span>
+                            <span><i class="fas fa-users"></i> 个人项目</span>
+                            <span><i class="fas fa-clock"></i> 1个月</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">LSTM</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Jupyter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-alt"></i> 研究报告
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="ai">
+                    <div class="project-image">
+                        🎵
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn">查看演示</a>
+                            <a href="#" class="overlay-btn">源代码</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>AI音乐生成器</h4>
+                            <span class="project-status">实验项目</span>
+                        </div>
+                        <p>基于深度学习的音乐创作系统，能够根据风格和情感生成原创音乐作品。</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> 2023年6月</span>
+                            <span><i class="fas fa-users"></i> 个人项目</span>
+                            <span><i class="fas fa-clock"></i> 2个月</span>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">RNN</span>
+                            <span class="tag">Music21</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">MIDI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> 查看代码
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-play"></i> 试听作品
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客/文章 -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title fade-in">技术博客</h2>
+            <p class="section-subtitle fade-in">分享我的学习心得和技术见解</p>
+            
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        📝
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年7月15日</span>
+                            <span><i class="fas fa-eye"></i> 1.2k 阅读</span>
+                            <span><i class="fas fa-comments"></i> 23 评论</span>
+                        </div>
+                        <h4>深度学习在自然语言处理中的最新进展</h4>
+                        <p>探讨Transformer架构的演进和GPT系列模型的突破性进展，以及对未来NLP发展的思考...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        🔧
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年6月28日</span>
+                            <span><i class="fas fa-eye"></i> 856 阅读</span>
+                            <span><i class="fas fa-comments"></i> 12 评论</span>
+                        </div>
+                        <h4>MLOps最佳实践：从模型训练到生产部署</h4>
+                        <p>分享在大规模机器学习项目中的经验，包括模型版本管理、自动化部署和监控...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        💡
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年6月10日</span>
+                            <span><i class="fas fa-eye"></i> 2.1k 阅读</span>
+                            <span><i class="fas fa-comments"></i> 45 评论</span>
+                        </div>
+                        <h4>如何构建高效的推荐系统</h4>
+                        <p>从协同过滤到深度学习推荐模型，详细介绍推荐系统的设计思路和优化策略...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        🚀
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年5月22日</span>
+                            <span><i class="fas fa-eye"></i> 1.5k 阅读</span>
+                            <span><i class="fas fa-comments"></i> 31 评论</span>
+                        </div>
+                        <h4>AI创业公司的技术挑战与机遇</h4>
+                        <p>分析当前AI创业环境，讨论技术选型、团队建设和产品化过程中的关键问题...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        📊
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年5月8日</span>
+                            <span><i class="fas fa-eye"></i> 967 阅读</span>
+                            <span><i class="fas fa-comments"></i> 18 评论</span>
+                        </div>
+                        <h4>数据可视化的艺术：让数据说话</h4>
+                        <p>介绍数据可视化的设计原则和工具选择，以及如何用图表有效传达数据洞察...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-image">
+                        🔍
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 2024年4月25日</span>
+                            <span><i class="fas fa-eye"></i> 1.8k 阅读</span>
+                            <span><i class="fas fa-comments"></i> 37 评论</span>
+                        </div>
+                        <h4>计算机视觉入门：从零开始的目标检测</h4>
+                        <p>详细介绍YOLO算法的原理和实现，包含完整的代码示例和实际应用案例...</p>
+                        <a href="#" class="read-more">
+                            阅读全文 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>让我们一起创造未来</h2>
+                <p>如果你对AI技术感兴趣，或者有项目合作机会，欢迎随时联系我。我很乐意与你探讨技术问题和分享经验。</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>邮箱</h4>
+                        <p>zhang.san@email.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>电话</h4>
+                        <p>+86 138-0013-8000</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>位置</h4>
+                        <p>北京市海淀区</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>可联系时间</h4>
+                        <p>周一至周五 9:00-18:00</p>
+                    </div>
+                </div>
+                
+                <div class="contact-buttons">
+                    <a href="mailto:zhang.san@email.com" class="contact-btn">
+                        <i class="fas fa-envelope"></i> 发送邮件
+                    </a>
+                    <a href="https://linkedin.com/in/zhangsan" class="contact-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/zhangsan" class="contact-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://weixin.qq.com/" class="contact-btn">
+                        <i class="fab fa-weixin"></i> 微信
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我</h4>
+                <p>我是张三，一名热爱技术的AI工程师。专注于机器学习、深度学习和自然语言处理，致力于用AI技术解决实际问题。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#projects">项目</a></li>
+                    <li><a href="#blog">博客</a></li>
+                    <li><a href="#contact">联系</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>技术栈</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Python & PyTorch</a></li>
+                    <li><a href="#">TensorFlow & Keras</a></li>
+                    <li><a href="#">React & Node.js</a></li>
+                    <li><a href="#">AWS & Docker</a></li>
+                    <li><a href="#">机器学习</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>联系信息</h4>
+                <p><i class="fas fa-envelope"></i> zhang.san@email.com</p>
+                <p><i class="fas fa-phone"></i> +86 138-0013-8000</p>
+                <p><i class="fas fa-map-marker-alt"></i> 北京市海淀区</p>
+                <p><i class="fas fa-globe"></i> zhangsan.github.io</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 张三. 保留所有权利. 用 ❤️ 和 ☕ 在北京制作</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 滚动进度指示器
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+            
+            // 返回顶部按钮显示/隐藏
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 返回顶部功能
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // 项目过滤功能
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有active类
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // 添加active类到当前按钮
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                const projects = document.querySelectorAll('.project-card');
+                
+                projects.forEach(project => {
+                    if (filter === 'all' || project.dataset.category === filter) {
+                        project.style.display = 'block';
+                        setTimeout(() => {
+                            project.style.opacity = '1';
+                            project.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        project.style.opacity = '0';
+                        project.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            project.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // 技能进度条动画
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 500);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.skill-category').forEach(category => {
+            skillObserver.observe(category);
+        });
+
+        // 统计数字动画
+        function animateNumber(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateNumber() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start) + '+';
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    element.textContent = target + '+';
+                }
+            }
+            updateNumber();
+        }
+
+        // 当统计区域可见时启动动画
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.textContent);
+                        animateNumber(stat, target);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.hero-stats').forEach(stats => {
+            statsObserver.observe(stats);
+        });
+    </script>
+</body>
+</html>
